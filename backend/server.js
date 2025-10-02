@@ -23,7 +23,7 @@ app.use(helmet({
 // CORS configurado para o frontend
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://yourapp.com'] // Substitua pela URL do seu frontend em produção
+    ? ['https://guiaifpe.vercel.app'] // Substitua pela URL do seu frontend em produção
     : ['http://localhost:5173', 'http://localhost:3000'],
   credentials: true
 }));
