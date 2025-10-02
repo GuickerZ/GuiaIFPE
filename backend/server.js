@@ -22,9 +22,25 @@ app.use(helmet({
 
 // CORS configurado para o frontend
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' 
-    ? ['https://guiaifpe.vercel.app'] // Substitua pela URL do seu frontend em produção
-    : ['https://85804b720d36.ngrok-free.app/', 'http://localhost:3000'],
+  origin: (origin, callback) => {
+    const allowedOrigins = [
+      'https://guiaifpe.vercel.app',
+      'http://localhost:3000'
+    ];
+
+    if (!origin) return callback(null, true); // permite requests tipo curl/postman
+
+    // liberar todos subdomínios do ngrok
+    if (/https:\/\/.*\.ngrok-free\.app/.test(origin)) {
+      return callback(null, true);
+    }
+
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+
+    return callback(new Error('Not allowed by CORS'));
+  },
   credentials: true
 }));
 
