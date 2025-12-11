@@ -1,0 +1,23 @@
+*   [33m1eeff67[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge branch 'main' of https://github.com/GuickerZ/GuiaIFPE
+[31m|[m[32m\[m  
+[31m|[m * [33md59ec45[m update
+[31m|[m * [33m3552203[m Images
+[31m|[m * [33m4e43b6a[m Add project screenshots to README
+[31m|[m * [33m0230a33[m Remove package-lock files to clear history
+[31m|[m * [33me2907ff[m Remove all AI references and scripts
+* [32m|[m [33m073e11f[m remove
+* [32m|[m [33m7530a20[m update
+* [32m|[m [33me0a613d[m Images
+* [32m|[m [33m11025a7[m Add project screenshots to README
+* [32m|[m [33m2438f27[m Remove package-lock files to clear history
+* [32m|[m [33m1ea705e[m Remove all AI references and scripts
+[32m|[m[32m/[m  
+* [33m3847df4[m Remove Railway config and update deployment docs
+* [33m08e6e22[m Remove
+* [33m1d5f6e6[m Add Docker and Railway support
+* [33medc58e8[m Add files via upload
+* [33m61e0c48[m CORES
+* [33md5a82e5[m teste
+*   [33mc89fd41[m Merge branch 'main' of https://github.com/GuickerZ/GuiaIFPE
+[33m|[m[34m\[m  
+[33m|[m * [33md555236[m Update README.md
