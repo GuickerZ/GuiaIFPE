@@ -4,22 +4,24 @@
 
 O Guia IFPE oferece consultas rápidas sobre turmas, disciplinas, professores e salas, ajudando a reduzir atrasos e otimizar o deslocamento no campus.
 
+
+## 📱 Demonstração
+
+<div align="center">
+  <img src="docs/0f883cf6-53d5-43a6-93c9-2a9f0275c256.jpeg" width="200" alt="Demonstração 1" style="margin: 5px;" />
+  <img src="docs/1ba87c35-39dd-45a5-b1ca-92ce9ce686a7.jpeg" width="200" alt="Demonstração 2" style="margin: 5px;" />
+  <img src="docs/230cda20-977d-4d8d-969d-14b91901eebe.jpeg" width="200" alt="Demonstração 3" style="margin: 5px;" />
+  <img src="docs/23b40e43-19c4-428c-9a66-007483e3d704.jpeg" width="200" alt="Demonstração 4" style="margin: 5px;" />
+  <img src="docs/292bc4c2-631b-4f45-aba0-b61623ca6392.jpeg" width="200" alt="Demonstração 5" style="margin: 5px;" />
+</div>
+
+---
 ![React](https://img.shields.io/badge/React-18.3-61DAFB?logo=react)
 ![Node.js](https://img.shields.io/badge/Node.js-18-339933?logo=node.js)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?logo=mysql)
 ![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker)
 
-## 📱 Demonstração
-
-<p align="center">
-  <img src="docs/login.png" alt="Tela de Login" width="250">
-  <img src="docs/dashboard.png" alt="Dashboard" width="250">
-  <img src="docs/horarios.png" alt="Horários" width="250">
-</p>
-
----
-
-## ✨ Funcionalidades Principais
+## Funcionalidades Principais
 
 - **Login seguro por CPF:** Autenticação via CPF do aluno ou professor, garantindo acesso seguro.
 - **Tela inicial personalizada:** Exibe dados acadêmicos do usuário (matrícula, curso, turma etc.).
