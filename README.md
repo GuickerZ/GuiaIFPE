@@ -13,6 +13,10 @@ O Guia IFPE oferece consultas rápidas sobre turmas, disciplinas, professores e 
   <img src="docs/230cda20-977d-4d8d-969d-14b91901eebe.jpeg" width="200" alt="Demonstração 3" style="margin: 5px;" />
   <img src="docs/23b40e43-19c4-428c-9a66-007483e3d704.jpeg" width="200" alt="Demonstração 4" style="margin: 5px;" />
   <img src="docs/292bc4c2-631b-4f45-aba0-b61623ca6392.jpeg" width="200" alt="Demonstração 5" style="margin: 5px;" />
+  <img src="docs/8dbc4665-a6fd-4fff-a941-44245210967a.jpeg" width="200" alt="Demonstração 6" style="margin: 5px;" />
+  <img src="docs/770f8b14-18c4-493c-9f2b-006a679dfeb2.jpeg" width="200" alt="Demonstração 7" style="margin: 5px;" />
+  <img src="docs/332f36ee-8895-4c1e-bd49-13b7dc87e808.jpeg" width="200" alt="Demonstração 8" style="margin: 5px;" />
+  <img src="docs/dfb765ec-40e3-4c8d-9ad0-0cf62542dfa0.jpeg" width="200" alt="Demonstração 8" style="margin: 5px;" />
 </div>
 
 ---
