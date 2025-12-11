@@ -148,7 +148,6 @@ const insertProductionData = async () => {
       "('Algoritmos', 'INFO105', 80)",
       "('Sistemas Operacionais', 'INFO106', 60)",
       "('Desenvolvimento Mobile', 'INFO107', 60)",
-      "('Inteligência Artificial', 'INFO108', 60)",
       
       // Eletroeletrônica
       "('Circuitos Elétricos', 'ELET101', 80)",
