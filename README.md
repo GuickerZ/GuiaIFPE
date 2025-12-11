@@ -180,59 +180,31 @@ GuiaIFPE/
 
 ---
 
-## 🚂 Deploy no Railway
+## ☁️ Hospedagem Própria (Self-Hosting)
 
-O Railway permite hospedar o backend + MySQL gratuitamente.
+Como o projeto é containerizado com Docker, você pode hospedá-lo facilmente em qualquer VPS ou servidor local.
 
-### 1. Criar conta no Railway
+### Requisitos do Servidor
+- 1GB RAM (mínimo)
+- Docker & Docker Compose instalados
 
-Acesse [railway.app](https://railway.app) e faça login com GitHub.
+### Passos para Deploy
 
-### 2. Criar projeto
-
-1. Clique em **"New Project"**
-2. Selecione **"Deploy from GitHub repo"**
-3. Escolha o repositório `GuiaIFPE`
-
-### 3. Adicionar MySQL
-
-1. No projeto, clique em **"+ New"**
-2. Selecione **"Database" → "MySQL"**
-3. O Railway cria automaticamente as variáveis de conexão
-
-### 4. Configurar Backend
-
-1. Clique no serviço do backend
-2. Vá em **"Settings" → "Root Directory"** e coloque: `backend`
-3. Em **"Variables"**, adicione:
-
-```
-DB_HOST=${{MySQL.MYSQLHOST}}
-DB_PORT=${{MySQL.MYSQLPORT}}
-DB_USER=${{MySQL.MYSQLUSER}}
-DB_PASSWORD=${{MySQL.MYSQLPASSWORD}}
-DB_NAME=${{MySQL.MYSQLDATABASE}}
-JWT_SECRET=sua_chave_secreta_aqui
-PORT=3001
-NODE_ENV=production
-```
-
-### 5. Inicializar banco
-
-1. Clique no MySQL
-2. Vá em **"Data" → "Query"**
-3. Cole o conteúdo de `scripts/init.sql` e execute
-
-### 6. Deploy do Frontend
-
-O frontend pode ser hospedado na **Vercel**:
-
-1. Importe o repositório na Vercel
-2. Configure a variável:
+1. **Clone o repositório no servidor:**
+   ```bash
+   git clone https://github.com/GuickerZ/GuiaIFPE.git
+   cd GuiaIFPE
    ```
-   VITE_API_URL=https://seu-backend.up.railway.app
+
+2. **Configure o ambiente:**
+   Edite o `docker-compose.yml` se precisar alterar portas ou senhas.
+
+3. **Inicie o serviço:**
+   ```bash
+   docker-compose up -d
    ```
-3. Deploy!
+
+O sistema estará rodando na porta 80 (ou a que você configurou).
 
 ---
 
