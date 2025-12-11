@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  # Banco de dados MySQL
+  mysql:
+    image: mysql:8.0
+    container_name: guiaifpe-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: guia_ifpe
+      MYSQL_USER: guiaifpe
+      MYSQL_PASSWORD: guiaifpe123
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+
+  # Backend Node.js
+  backend:
+    build: ./backend
+    container_name: guiaifpe-backend
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    environment:
+      DB_HOST: mysql
+      DB_USER: guiaifpe
+      DB_PASSWORD: guiaifpe123
+      DB_NAME: guia_ifpe
+      DB_PORT: 3306
+      JWT_SECRET: sua_chave_jwt_super_secreta_aqui
+      PORT: 3001
+      NODE_ENV: development
+    depends_on:
+      mysql:
+        condition: service_healthy
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+
+  # Frontend React (desenvolvimento)
+  frontend:
+    image: node:18-alpine
+    container_name: guiaifpe-frontend
+    working_dir: /app
+    ports:
+      - "5173:5173"
+    environment:
+      VITE_API_URL: http://localhost:3001
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: sh -c "npm install && npm run dev -- --host 0.0.0.0"
+    depends_on:
+      - backend
+
+volumes:
+  mysql_data:
